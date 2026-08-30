@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABS Software - Iniciar Sesión</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Fonts & Custom CSS -->
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="bg-[#06090f] text-slate-100 antialiased selection:bg-cyan-500 selection:text-black">
+
+  <!-- Background Global Stylized Constellation Network Mesh Canvas -->
+  <canvas id="mesh-canvas"></canvas>
+
+  <!-- ======================================================================
+       TOP BRANDING & DYNAMIC KINETIC PHRASE SECTION (Centered)
+       ====================================================================== -->
+  <header class="top-branding-section" aria-label="Identidad de Marca ABS Software">
+    
+    <!-- Primary Brand Logo -->
+    <div class="brand-abs-title">
+      <span>A</span>
+      <span>B</span>
+      <span class="logo-glyph-s">S</span>
+    </div>
+    <p class="brand-abs-subtitle">SOFTWARE</p>
+
+    <!-- Dynamic Kinetic Typography: Single Horizontal Row (Zero clipping) -->
+    <div class="phrase-single-row" id="phrase-single-row">
+      <span class="dynamic-word-wrapper" id="dynamic-word-wrapper">
+        <span class="dynamic-word-text" id="dynamic-word-text">
+          <span class="char-a">A</span>BSOLUTE
+        </span>
+      </span>
+      <span class="anchor-phrase-inline">BUSINESS SOLUTIONS</span>
+    </div>
+
+  </header>
+
+  <!-- ======================================================================
+       CENTERED FLOATING LOGIN CARD (With Logo Inside)
+       ====================================================================== -->
+  <main class="login-card-container">
+    <div class="login-card">
+      
+      <!-- Card Logo Emblem -->
+      <div class="card-logo-container">
+        <img src="assets/logo.png" alt="ABS Logo Emblem" class="card-logo-img">
+      </div>
+
+      <!-- Card Header -->
+      <div class="card-header">
+        <h1 class="card-title">INICIAR SESIÓN</h1>
+        <p class="card-subtitle">Ingrese sus credenciales para acceder</p>
+      </div>
+
+      <!-- Login Form -->
+      <form id="login-form" novalidate autocomplete="on">
+        
+        <!-- Username / Email -->
+        <div class="form-group">
+          <label for="username" class="form-label">Nombre de usuario o Correo electrónico</label>
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="username" 
+              name="username" 
+              class="form-input" 
+              placeholder="ej. rampie@abssoftware.com"
+              required
+              autocomplete="username"
+              autofocus
+            >
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password" class="form-label">Contraseña</label>
+          <div class="input-wrapper">
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              class="form-input" 
+              placeholder="••••••••••••"
+              required
+              autocomplete="current-password"
+            >
+            <button type="button" id="toggle-password" class="password-toggle-btn" title="Mostrar u ocultar contraseña" aria-label="Mostrar contraseña">
+              <i data-lucide="eye" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Options: Remember Me & Forgot Password -->
+        <div class="auth-options">
+          <label class="checkbox-label">
+            <input type="checkbox" id="remember" class="custom-checkbox" checked>
+            <span>Recordar sesión</span>
+          </label>
+          <a href="#" class="forgot-password-link" onclick="alert('Instrucciones de recuperación enviadas al correo registrado.'); return false;">
+            ¿Olvidó su contraseña?
+          </a>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submit-btn" class="btn-submit-login">
+          <span>INGRESAR</span>
+        </button>
+
+        <!-- Status / Feedback -->
+        <div id="login-feedback" class="login-status-feedback" role="alert"></div>
+
+        <!-- Card Footer -->
+        <div class="card-footer">
+          <a href="#" id="btn-fill-demo" class="text-xs text-slate-400 hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5 font-mono py-1 px-2.5 rounded-md hover:bg-slate-800/40">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-cyan-400"></i> Auto-completar Demo
+          </a>
+        </div>
+
+      </form>
+
+    </div>
+  </main>
+
+  <!-- ======================================================================
+       BOTTOM SECTION: English Tagline
+       ====================================================================== -->
+  <footer class="bottom-branding-section">
+    <p class="brand-tagline-bottom">ABSOLUTE SOLUTIONS. ADVANCED SOFTWARE.</p>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="js/login.js"></script>
+</body>
+</html>
