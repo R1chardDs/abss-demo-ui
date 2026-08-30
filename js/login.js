@@ -314,7 +314,7 @@ function initFormInteractivity() {
       if (window.triggerParticleBurst) window.triggerParticleBurst();
 
       setTimeout(() => {
-        window.location.href = 'index.html';
+        window.location.href = 'dashboard.html';
       }, 1100);
     });
   }
